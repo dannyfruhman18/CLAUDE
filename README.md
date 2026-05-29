@@ -6,18 +6,25 @@ Claude Code skills for this repository.
 
 ### `remotion`
 
-Create, edit, preview, and render videos programmatically with
-[Remotion](https://www.remotion.dev) (the React-based video framework).
-Activates when you ask Claude to build a video, animation, motion graphic, or
-render an MP4/WebM/GIF from React code.
+The **official** [Remotion](https://www.remotion.dev) Agent Skill, copied from
+[`remotion-dev/skills`](https://github.com/remotion-dev/skills) (the same content
+installed by `npx skills@latest add remotion-dev/skills`).
 
-- `.claude/skills/remotion/SKILL.md` — fundamentals, project structure, core
-  APIs, setup & render quick reference, working checklist, common pitfalls.
-- `.claude/skills/remotion/references/animation.md` — `interpolate`, `spring`,
-  `<Sequence>`/`<Series>`, loops, determinism, async loading.
-- `.claude/skills/remotion/references/rendering.md` — CLI, Node.js SSR, AWS
-  Lambda, output formats, performance.
-- `.claude/skills/remotion/references/examples.md` — copy-paste compositions.
+It gives coding agents the domain knowledge to write correct Remotion code —
+scaffolding projects, building compositions and components, animating with
+`useCurrentFrame()`/`interpolate()`/springs, working with audio, video, images,
+captions/subtitles, transitions, fonts, and rendering. Claude Code picks it up
+automatically from `.claude/skills/`.
 
-Skills are picked up automatically by Claude Code from the `.claude/skills/`
-directory.
+Layout:
+
+- `.claude/skills/remotion/SKILL.md` — entry point with core best practices and
+  a router to the detailed rule files.
+- `.claude/skills/remotion/rules/*.md` — focused rules (compositions,
+  sequencing, timing, audio, videos, images, captions/subtitles, transitions,
+  text animations, fonts, transparent videos, ffmpeg, 3D, Tailwind, maplibre,
+  and more).
+- `.claude/skills/remotion/rules/assets/*.tsx` — example components referenced
+  by the rules.
+
+License: see the [Remotion license](https://remotion.dev/license).
