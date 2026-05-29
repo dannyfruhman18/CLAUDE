@@ -28,12 +28,13 @@ export const AI_DURATION =
 export const AIDangersVideo: React.FC = () => {
   return (
     <AbsoluteFill style={{ backgroundColor: theme.bg }}>
-      {/* Background music (silent placeholder — drop in real track) */}
-      <Audio src={staticFile("audio/bg-music.mp3")} volume={0.12} />
+      {/* Background music — generated dark-tension bed */}
+      <Audio src={staticFile("audio/bg-music.mp3")} volume={0.16} />
 
       <TransitionSeries>
         <TransitionSeries.Sequence durationInFrames={SCENE.hook}>
           <HookScene />
+          <Audio src={staticFile("voiceover/scene-1.mp3")} volume={1} />
         </TransitionSeries.Sequence>
 
         <TransitionSeries.Transition
@@ -43,6 +44,7 @@ export const AIDangersVideo: React.FC = () => {
 
         <TransitionSeries.Sequence durationInFrames={SCENE.build}>
           <BuildScene />
+          <Audio src={staticFile("voiceover/scene-2.mp3")} volume={1} />
         </TransitionSeries.Sequence>
 
         <TransitionSeries.Transition
@@ -52,6 +54,7 @@ export const AIDangersVideo: React.FC = () => {
 
         <TransitionSeries.Sequence durationInFrames={SCENE.tension}>
           <TensionScene />
+          <Audio src={staticFile("voiceover/scene-3.mp3")} volume={1} />
         </TransitionSeries.Sequence>
 
         <TransitionSeries.Transition
@@ -61,6 +64,7 @@ export const AIDangersVideo: React.FC = () => {
 
         <TransitionSeries.Sequence durationInFrames={SCENE.escalation}>
           <EscalationScene />
+          <Audio src={staticFile("voiceover/scene-4.mp3")} volume={1} />
         </TransitionSeries.Sequence>
 
         <TransitionSeries.Transition
@@ -70,6 +74,7 @@ export const AIDangersVideo: React.FC = () => {
 
         <TransitionSeries.Sequence durationInFrames={SCENE.close}>
           <CloseScene />
+          <Audio src={staticFile("voiceover/scene-5.mp3")} volume={1} />
         </TransitionSeries.Sequence>
       </TransitionSeries>
     </AbsoluteFill>

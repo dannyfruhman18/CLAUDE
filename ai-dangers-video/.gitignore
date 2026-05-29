@@ -5,3 +5,7 @@ dist
 
 # Ignore the output video from Git but not videos you import into src/.
 out
+
+# Python TTS/music tooling (regenerated via scripts/, model is large)
+.venv
+.voices
